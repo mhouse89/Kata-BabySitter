@@ -7,9 +7,9 @@ import static org.junit.Assert.*;
  */
 public class BabySitterTest {
     @Test
-    public void ifStartIs5pmEndIs4amWith8pmBedtimePayEquals192Dollars() {
+    public void ifStartIs5pmEndIs4amWith8pmBedtimePayEquals120Dollars() {
         BabySitter babySitter = new BabySitter();
         int total = babySitter.calculateCharge(17, 4, 20);
-        assertEquals(total, 192);
+        assertEquals(total, 120);
     }
 }
