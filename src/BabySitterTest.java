@@ -13,4 +13,11 @@ public class BabySitterTest {
         assertEquals(total, 132);
     }
 
+    @Test
+    public void ifStartIs6pmEndIs3amWith8pmBedtimePayEquals104Dollars() {
+        BabySitter babySitter = new BabySitter();
+        int total = babySitter.calculateCharge(18, 3, 20);
+        assertEquals(total, 104);
+    }
+
 }
