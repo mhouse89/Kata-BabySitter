@@ -38,5 +38,10 @@ public class BabySitterTest {
         assertEquals(total, 116);
     }
 
+    @Test (expected = IndexOutOfBoundsException.class)
+    public void ifStartIsLessThan5pmReturnAnError(){
+        total = babySitter.calculateCharge(16, 4, 20);
+
+    }
 
 }

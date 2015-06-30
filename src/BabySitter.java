@@ -3,6 +3,10 @@ public class BabySitter {
 
     public int calculateCharge(int startTime, int endTime, int bedTime) {
 
+        if (startTime < 17) {
+            throw new IndexOutOfBoundsException("Start Time must be 5pm or later");
+        }
+
         int startToBedTime;
         int bedtimeToMidnight;
         int midnightToEnd;
