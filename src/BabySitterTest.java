@@ -3,9 +3,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by matthewhouse on 6/27/15.
- */
+
 public class BabySitterTest {
 
     private BabySitter babySitter;
@@ -40,10 +38,5 @@ public class BabySitterTest {
         assertEquals(total, 116);
     }
 
-    @Test
-    public void ifStartIs5pmEndIs2amWith1amBedtimePayEquals116Dollars(){
-        total = babySitter.calculateCharge(17, 2, 1);
-        assertEquals(total, 116);
-    }
 
 }
