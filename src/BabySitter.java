@@ -2,11 +2,22 @@
 public class BabySitter {
 
     public int calculateCharge(int startTime, int endTime, int bedTime) {
-        int startToBedTime = bedTime - startTime;
-        int bedTimeToMidnight = 24 - bedTime;
-        int midnightToEnd = endTime;
 
-        return (startToBedTime * 12) + (bedTimeToMidnight * 8) + (midnightToEnd * 16);
+        int startToBedTime;
+        int bedtimeToMidnight;
+        int midnightToEnd;
+
+        startToBedTime = bedTime - startTime;
+        bedtimeToMidnight = 24 - bedTime;
+
+        if (endTime > 1 && endTime <= 4) {
+            midnightToEnd = endTime;
+        }
+        else {
+            midnightToEnd = 0;
+        }
+
+        return (startToBedTime * 12) + (bedtimeToMidnight * 8) + (midnightToEnd * 16);
     }
 
 }
