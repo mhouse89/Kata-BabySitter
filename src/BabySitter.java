@@ -7,6 +7,10 @@ public class BabySitter {
             throw new IndexOutOfBoundsException("Start Time must be 5pm or later");
         }
 
+        if (endTime > 4) {
+            throw new IndexOutOfBoundsException("End Time must be 4am or later");
+        }
+
         int startToBedTime;
         int bedtimeToMidnight;
         int midnightToEnd;

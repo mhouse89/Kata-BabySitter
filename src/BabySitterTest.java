@@ -44,4 +44,10 @@ public class BabySitterTest {
 
     }
 
+    @Test (expected = IndexOutOfBoundsException.class)
+    public void ifEndIsLaterThan4amReturnAnError(){
+        total = babySitter.calculateCharge(17, 5, 20);
+
+    }
+
 }
