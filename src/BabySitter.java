@@ -9,11 +9,11 @@ public class BabySitter {
 
 
         if (startTime < 17) {
-            throw new IndexOutOfBoundsException("Start Time must be 5pm or later");
+            throw new IndexOutOfBoundsException("Start Time must be 5pm or later.");
         }
 
         if (endTime > 4 && endTime != 24) {
-            throw new IndexOutOfBoundsException("End Time must be 4am or earlier");
+            throw new IndexOutOfBoundsException("End Time must be 4am or earlier.");
         }
 
         startToBedTime = bedTime - startTime;
