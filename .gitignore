@@ -13,7 +13,7 @@
 hs_err_pid*
 
 Kata-BabySitter.iml
-out
-.idea
+out/*
+.idea/*
 
 
