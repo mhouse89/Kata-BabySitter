@@ -9,6 +9,7 @@ import static org.junit.Assert.*;
 public class BabySitterTest {
 
     private BabySitter babySitter;
+    int total;
 
     @Before
     public void setUp() {
@@ -17,20 +18,26 @@ public class BabySitterTest {
 
     @Test
     public void ifStartIs5pmEndIs4amWith8pmBedtimePayEquals132Dollars() {
-        int total = babySitter.calculateCharge(17, 4, 20);
+        total = babySitter.calculateCharge(17, 4, 20);
         assertEquals(total, 132);
     }
 
     @Test
     public void ifStartIs6pmEndIs3amWith8pmBedtimePayEquals104Dollars() {
-        int total = babySitter.calculateCharge(18, 3, 20);
+        total = babySitter.calculateCharge(18, 3, 20);
         assertEquals(total, 104);
     }
 
     @Test
     public void ifStartIs5pmEndIs12amWith10pmBedtimePayEquals76Dollars() {
-        int total = babySitter.calculateCharge(17, 24, 22);
+        total = babySitter.calculateCharge(17, 24, 22);
         assertEquals(total, 76);
+    }
+
+    @Test
+    public void ifStartIs5pmEndIs2amWithMidnightBedtimePayEquals116Dollars(){
+        total = babySitter.calculateCharge(17, 2, 24);
+        assertEquals(total, 116);
     }
 
 }
