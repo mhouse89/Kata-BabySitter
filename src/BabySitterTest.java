@@ -40,4 +40,10 @@ public class BabySitterTest {
         assertEquals(total, 116);
     }
 
+    @Test
+    public void ifStartIs5pmEndIs2amWith1amBedtimePayEquals116Dollars(){
+        total = babySitter.calculateCharge(17, 2, 1);
+        assertEquals(total, 116);
+    }
+
 }
